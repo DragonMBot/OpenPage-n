@@ -15,17 +15,17 @@ from rest_framework import status
 from rest_framework.test import APIRequestFactory, APITestCase
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from accounts.models import User
+from backend.accounts.models import User
 
-from .article_serializers import ArticleImageSerializer
-from .models import (
+from backend.knowledge.article_serializers import ArticleImageSerializer
+from backend.knowledge.models import (
     Article,
     ArticleImage,
     ArticleImageUploadSession,
     KnowledgeProfile,
     StorageCleanupJob,
 )
-from .storage import LocalKnowledgeStorage, article_image_storage_key
+from backend.knowledge.storage import LocalKnowledgeStorage, article_image_storage_key
 
 PNG = b"\x89PNG\r\n\x1a\narticle-image"
 

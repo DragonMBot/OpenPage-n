@@ -14,12 +14,12 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from accounts.models import User
+from backend.accounts.models import User
 
-from .epub import InvalidEpubError, extract_epub_metadata
-from .models import Book, KnowledgeProfile, StorageCleanupJob, UserLibraryBook
-from .services import create_book, update_book_metadata
-from .storage import LocalKnowledgeStorage, book_cover_storage_key, book_storage_key
+from backend.knowledge.epub import InvalidEpubError, extract_epub_metadata
+from backend.knowledge.models import Book, KnowledgeProfile, StorageCleanupJob, UserLibraryBook
+from backend.knowledge.services import create_book, update_book_metadata
+from backend.knowledge.storage import LocalKnowledgeStorage, book_cover_storage_key, book_storage_key
 from .test_helpers import make_epub, make_pdf
 
 JPEG = b"\xff\xd8\xff\xe0test-cover"

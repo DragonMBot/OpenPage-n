@@ -8,16 +8,16 @@ from django.core.management import call_command
 from django.db import close_old_connections, connection, transaction
 from django.test import TestCase, TransactionTestCase
 
-from accounts.models import User
+from backend.accounts.models import User
 
-from .article_services import delete_article
-from .models import (
+from backend.knowledge.article_services import delete_article
+from backend.knowledge.models import (
     Article,
     ArticleImage,
     ArticleImageUploadSession,
     StorageCleanupJob,
 )
-from .storage_cleanup import enqueue_storage_cleanup, process_storage_cleanup_batch
+from backend.knowledge.storage_cleanup import enqueue_storage_cleanup, process_storage_cleanup_batch
 
 
 class RecordingStorage:

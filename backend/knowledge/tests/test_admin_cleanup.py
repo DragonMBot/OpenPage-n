@@ -4,17 +4,17 @@ from django.contrib.admin.sites import AdminSite
 from django.db.models.deletion import ProtectedError
 from django.test import RequestFactory, TestCase
 
-from accounts.admin import CustomUserAdmin
-from accounts.models import User
+from backend.accounts.admin import CustomUserAdmin
+from backend.accounts.models import User
 
-from .admin import (
+from backend.knowledge.admin import (
     ArticleAdmin,
     ArticleImageAdmin,
     ArticleImageUploadSessionAdmin,
     BookAdmin,
     KnowledgeProfileAdmin,
 )
-from .models import (
+from backend.knowledge.models import (
     Article,
     ArticleImage,
     ArticleImageUploadSession,
@@ -23,7 +23,7 @@ from .models import (
     StorageCleanupJob,
     UserLibraryBook,
 )
-from .storage_cleanup import process_storage_cleanup_batch
+from backend.knowledge.storage_cleanup import process_storage_cleanup_batch
 
 
 class RecordingStorage:

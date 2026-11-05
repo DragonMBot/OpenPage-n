@@ -11,10 +11,10 @@ from rest_framework import status
 from rest_framework.test import APITestCase
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from accounts.models import User
+from backend.accounts.models import User
 
-from .models import Book, KnowledgeProfile, StorageCleanupJob
-from .storage import LocalKnowledgeStorage, book_storage_key
+from backend.knowledge.models import Book, KnowledgeProfile, StorageCleanupJob
+from backend.knowledge.storage import LocalKnowledgeStorage, book_storage_key
 from .test_helpers import make_pdf
 
 PNG = b"\x89PNG\r\n\x1a\ntest-avatar"

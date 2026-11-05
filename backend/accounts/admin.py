@@ -1,7 +1,7 @@
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
 
-from knowledge.admin_mixins import StorageCleanupAdminMixin
+from ..knowledge.admin_mixins import StorageCleanupAdminMixin
 
 from .models import PendingRegistration, User
 

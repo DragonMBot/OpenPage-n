@@ -9,11 +9,11 @@ from django.core.exceptions import ValidationError
 from django.db import IntegrityError, transaction
 from django.test import SimpleTestCase, TestCase, override_settings
 
-from accounts.models import User
+from backend.accounts.models import User
 
-from .models import Book, KnowledgeProfile, UserLibraryBook
-from .services import create_book
-from .storage import (
+from backend.knowledge.models import Book, KnowledgeProfile, UserLibraryBook
+from backend.knowledge.services import create_book
+from backend.knowledge.storage import (
     LocalKnowledgeStorage,
     S3KnowledgeStorage,
     article_image_storage_key,

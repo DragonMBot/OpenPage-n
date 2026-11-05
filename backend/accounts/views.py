@@ -24,7 +24,7 @@ from rest_framework.views import APIView
 from rest_framework_simplejwt.exceptions import TokenError
 from rest_framework_simplejwt.tokens import RefreshToken
 
-from core.throttles import (
+from ..core.throttles import (
     LoginEmailThrottle,
     LoginIPThrottle,
     RegisterEmailThrottle,

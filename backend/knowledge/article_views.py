@@ -10,7 +10,7 @@ from rest_framework.parsers import JSONParser, MultiPartParser
 from rest_framework.permissions import AllowAny, IsAuthenticated
 from rest_framework.response import Response
 
-from core.throttles import ArticleImageUploadThrottle
+from ..core.throttles import ArticleImageUploadThrottle
 
 from .article_serializers import (
     ArticleImageSerializer,
